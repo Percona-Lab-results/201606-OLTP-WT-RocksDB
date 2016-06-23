@@ -1,6 +1,6 @@
 MONGODIR=/opt/vadim/bin/percona-server-mongodb-3.2.6-1.0/
 #MONGODIR=/opt/vadim/bin/mongodb-linux-x86_64-ubuntu1604-3.2.7/
-DATADIR=/data/sam/mongorocks
+DATADIR=/data/pm1725/mongorocks
 REMOTEHOST=172.16.0.3
 
 startmongo(){
@@ -10,7 +10,7 @@ startmongo(){
   ssh -n root@$REMOTEHOST "echo never > /sys/kernel/mm/transparent_hugepage/enabled"
   ssh -n root@$REMOTEHOST "echo never > /sys/kernel/mm/transparent_hugepage/defrag"
 #  ssh -n -f root@$REMOTEHOST "ulimit -n 1000000; numactl --interleave=all $MONGODIR/bin/mongod --dbpath=$DATADIR --wiredTigerCacheSizeGB=${BP} --syncdelay=60 --logpath=$DATADIR/logfile.log > /dev/null 2>&1 &"
-  ssh -n -f root@$REMOTEHOST "ulimit -n 1000000; numactl --interleave=all $MONGODIR/bin/mongod --dbpath=$DATADIR --storageEngine=rocksdb --config=$MONGODIR/bin/rocks.conf --rocksdbCacheSizeGB=${BP} --logpath=$DATADIR/logfile.log > /dev/null 2>&1 &"
+  ssh -n -f root@$REMOTEHOST "ulimit -n 1000000; numactl --interleave=all $MONGODIR/bin/mongod --dbpath=$DATADIR --storageEngine=rocksdb --config=$MONGODIR/bin/rocks.conf --rocksdbCacheSizeGB=${BP} --logpath=$DATADIR/logfile.log > $DATADIR/output.log 2>&1 &"
 
 #  cd $MONGODIR
 #  sync
@@ -65,6 +65,11 @@ waitmongo(){
 	$MONGODIR/bin/mongo --eval "db.setProfilingLevel(0, 100000)"
 ENDSSH
 pidm=$(ssh root@$REMOTEHOST pidof mongod)
+if [ -z $pidm ]; then
+echo "PID empty, exiting"
+exit 1
+
+fi
 echo "MongoDB PID: $pidm"
 ssh root@$REMOTEHOST <<ENDSSH
 	cgcreate -g memory:DBLimitedGroup

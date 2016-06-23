@@ -1,10 +1,10 @@
 source config-remote.sh
 DB="sbtest"
-DIR=res-OLTP-RW-threads-scale-cache20G-sam863-8t-rocks-4
+DIR=res-OLTP-RW-threads-scale-cache20G-pm1725-8t-rocks-3
 
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-runparam='{"engine":"rocksdb","storage":"sam863","workload":"RW","compression":"snappy","server":"blade3","network":"client","runsign":"oltp_rw_longrun_cache20G_sam863_network","syncdelay":"60"}'
+runparam='{"engine":"rocksdb","storage":"pm1725","workload":"RW","compression":"snappy","server":"blade3","network":"client","runsign":"oltp_rw_threads_cache20G_pm1725_network","syncdelay":"60"}'
 mkdir -p $DIR
 echo $runparam > $DIR/runparam.json
 
