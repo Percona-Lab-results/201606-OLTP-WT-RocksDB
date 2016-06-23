@@ -1,0 +1,65 @@
+sysbench 1.0:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 360
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+setting write concern to 0
+Initializing worker threads...
+
+Threads started!
+
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in non index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in insert (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  10s] threads: 360, tps: 36.00, reads: 72.00, writes: 36.00, response time: 8002.75ms (95%), errors: 144.00, reconnects:  0.00
+(last message repeated 359 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in non index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in insert (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  20s] threads: 360, tps: 36.00, reads: 72.00, writes: 36.00, response time: 8501.57ms (95%), errors: 144.00, reconnects:  0.00
+(last message repeated 359 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in non index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in insert (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  30s] threads: 360, tps: 36.00, reads: 72.00, writes: 36.00, response time: 8501.57ms (95%), errors: 144.00, reconnects:  0.00
+(last message repeated 359 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in non index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in insert (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  40s] threads: 360, tps: 36.00, reads: 108.00, writes: 36.00, response time: 8501.57ms (95%), errors: 144.00, reconnects:  0.00
+(last message repeated 359 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in non index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in insert (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  50s] threads: 360, tps: 36.00, reads: 108.00, writes: 36.00, response time: 8501.57ms (95%), errors: 216.00, reconnects:  0.00
+(last message repeated 359 times)
+FATAL: error in non index update (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 359 times)
+FATAL: error in insert (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])

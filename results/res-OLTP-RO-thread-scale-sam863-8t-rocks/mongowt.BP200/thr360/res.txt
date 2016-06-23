@@ -1,0 +1,77 @@
+sysbench 1.0:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 360
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+setting write concern to 0
+Initializing worker threads...
+
+Threads started!
+
+[  10s] threads: 360, tps: 5101.56, reads: 71661.16, writes: 0.00, response time: 85.77ms (95%), errors: 0.00, reconnects:  0.00
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+[  20s] threads: 360, tps: 5098.20, reads: 71313.39, writes: 0.00, response time: 85.59ms (95%), errors: 2.80, reconnects:  0.00
+[  30s] threads: 360, tps: 5082.10, reads: 71172.72, writes: 0.00, response time: 85.15ms (95%), errors: 0.00, reconnects:  0.00
+[  40s] threads: 360, tps: 5098.20, reads: 71323.71, writes: 0.00, response time: 84.75ms (95%), errors: 2.80, reconnects:  0.00
+[  50s] threads: 360, tps: 5084.50, reads: 71218.14, writes: 0.00, response time: 84.65ms (95%), errors: 0.00, reconnects:  0.00
+[  60s] threads: 360, tps: 5084.70, reads: 71174.34, writes: 0.00, response time: 84.70ms (95%), errors: 0.00, reconnects:  0.00
+(last message repeated 83 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  70s] threads: 360, tps: 5085.30, reads: 71147.72, writes: 0.00, response time: 85.08ms (95%), errors: 3.90, reconnects:  0.00
+(last message repeated 21 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+[  80s] threads: 360, tps: 5075.50, reads: 71021.89, writes: 0.00, response time: 85.18ms (95%), errors: 2.80, reconnects:  0.00
+(last message repeated 16 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  90s] threads: 360, tps: 5092.90, reads: 71247.78, writes: 0.00, response time: 84.93ms (95%), errors: 3.70, reconnects:  0.00
+[ 100s] threads: 360, tps: 5077.00, reads: 71023.24, writes: 0.00, response time: 85.10ms (95%), errors: 3.80, reconnects:  0.00
+[ 110s] threads: 360, tps: 5074.56, reads: 71019.47, writes: 0.00, response time: 85.05ms (95%), errors: 4.00, reconnects:  0.00
+[ 120s] threads: 360, tps: 5079.14, reads: 71055.51, writes: 0.00, response time: 85.23ms (95%), errors: 4.10, reconnects:  0.00
+[ 130s] threads: 360, tps: 5085.00, reads: 71150.21, writes: 0.00, response time: 85.00ms (95%), errors: 3.60, reconnects:  0.00
+[ 140s] threads: 360, tps: 5092.20, reads: 71226.10, writes: 0.00, response time: 84.93ms (95%), errors: 4.20, reconnects:  0.00
+[ 150s] threads: 360, tps: 5074.10, reads: 70998.40, writes: 0.00, response time: 85.15ms (95%), errors: 3.90, reconnects:  0.00
+[ 160s] threads: 360, tps: 5071.99, reads: 70940.36, writes: 0.00, response time: 85.33ms (95%), errors: 4.40, reconnects:  0.00
+[ 170s] threads: 360, tps: 5081.11, reads: 71108.54, writes: 0.00, response time: 84.98ms (95%), errors: 3.80, reconnects:  0.00
+[ 180s] threads: 360, tps: 5074.00, reads: 70980.91, writes: 0.00, response time: 84.98ms (95%), errors: 3.90, reconnects:  0.00
+[ 190s] threads: 360, tps: 5070.60, reads: 70931.79, writes: 0.00, response time: 85.26ms (95%), errors: 4.20, reconnects:  0.00
+[ 200s] threads: 360, tps: 5066.20, reads: 70870.73, writes: 0.00, response time: 85.36ms (95%), errors: 3.60, reconnects:  0.00
+[ 210s] threads: 360, tps: 5081.90, reads: 71121.84, writes: 0.00, response time: 84.87ms (95%), errors: 4.20, reconnects:  0.00
+[ 220s] threads: 360, tps: 5090.40, reads: 71214.74, writes: 0.00, response time: 84.77ms (95%), errors: 3.90, reconnects:  0.00
+[ 230s] threads: 360, tps: 5079.60, reads: 71037.01, writes: 0.00, response time: 85.03ms (95%), errors: 4.40, reconnects:  0.00
+[ 240s] threads: 360, tps: 5090.70, reads: 71238.50, writes: 0.00, response time: 84.95ms (95%), errors: 3.80, reconnects:  0.00
+[ 250s] threads: 360, tps: 5079.18, reads: 71043.99, writes: 0.00, response time: 85.13ms (95%), errors: 3.90, reconnects:  0.00
+[ 260s] threads: 360, tps: 5079.22, reads: 71064.31, writes: 0.00, response time: 85.21ms (95%), errors: 4.20, reconnects:  0.00
+[ 270s] threads: 360, tps: 5071.50, reads: 70976.49, writes: 0.00, response time: 85.26ms (95%), errors: 3.60, reconnects:  0.00
+[ 280s] threads: 360, tps: 5074.40, reads: 70995.80, writes: 0.00, response time: 85.26ms (95%), errors: 4.20, reconnects:  0.00
+[ 290s] threads: 360, tps: 5072.38, reads: 70963.97, writes: 0.00, response time: 85.05ms (95%), errors: 3.80, reconnects:  0.00
+[ 300s] threads: 360, tps: 5076.01, reads: 70993.28, writes: 0.00, response time: 85.08ms (95%), errors: 4.50, reconnects:  0.00
+(last message repeated 904 times)
+OLTP test statistics:
+    queries performed:
+        read:                            21334654
+        write:                           0
+        other:                           1524800
+        total:                           22859454
+    transactions:                        1524800 (4973.48 per sec.)
+    read/write requests:                 21334654 (69587.80 per sec.)
+    other operations:                    1524800 (4973.48 per sec.)
+    ignored errors:                      1028   (3.35 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          306.5861s
+    total number of events:              1524800
+    total time taken by event execution: 108125.5768s
+    response time:
+         min:                                  7.10ms
+         avg:                                 70.91ms
+         max:                              27019.19ms
+         approx.  95 percentile:              85.08ms
+
+Threads fairness:
+    events (avg/stddev):           4235.5556/1219.61
+    execution time (avg/stddev):   300.3488/1.27
+

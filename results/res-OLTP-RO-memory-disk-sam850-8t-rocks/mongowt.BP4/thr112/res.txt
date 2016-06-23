@@ -1,0 +1,69 @@
+sysbench 1.0:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 112
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+setting write concern to 0
+Initializing worker threads...
+
+Threads started!
+
+[  10s] threads: 112, tps: 994.39, reads: 14009.89, writes: 0.00, response time: 127.06ms (95%), errors: 0.00, reconnects:  0.00
+[  20s] threads: 112, tps: 1002.60, reads: 14031.86, writes: 0.00, response time: 126.42ms (95%), errors: 0.00, reconnects:  0.00
+[  30s] threads: 112, tps: 1004.00, reads: 14058.85, writes: 0.00, response time: 126.46ms (95%), errors: 0.00, reconnects:  0.00
+[  40s] threads: 112, tps: 1002.70, reads: 14045.60, writes: 0.00, response time: 126.23ms (95%), errors: 0.00, reconnects:  0.00
+[  50s] threads: 112, tps: 1002.60, reads: 14030.35, writes: 0.00, response time: 126.91ms (95%), errors: 0.00, reconnects:  0.00
+[  60s] threads: 112, tps: 1003.30, reads: 14051.69, writes: 0.00, response time: 126.61ms (95%), errors: 0.00, reconnects:  0.00
+[  70s] threads: 112, tps: 1002.80, reads: 14033.76, writes: 0.00, response time: 126.65ms (95%), errors: 0.00, reconnects:  0.00
+[  80s] threads: 112, tps: 1001.70, reads: 14016.60, writes: 0.00, response time: 126.61ms (95%), errors: 0.00, reconnects:  0.00
+[  90s] threads: 112, tps: 1002.90, reads: 14047.06, writes: 0.00, response time: 126.57ms (95%), errors: 0.00, reconnects:  0.00
+[ 100s] threads: 112, tps: 1001.80, reads: 14020.21, writes: 0.00, response time: 126.84ms (95%), errors: 0.00, reconnects:  0.00
+[ 110s] threads: 112, tps: 1000.60, reads: 14017.62, writes: 0.00, response time: 126.61ms (95%), errors: 0.00, reconnects:  0.00
+[ 120s] threads: 112, tps: 1002.40, reads: 14035.15, writes: 0.00, response time: 126.27ms (95%), errors: 0.00, reconnects:  0.00
+[ 130s] threads: 112, tps: 1001.30, reads: 14007.82, writes: 0.00, response time: 126.99ms (95%), errors: 0.00, reconnects:  0.00
+[ 140s] threads: 112, tps: 1000.80, reads: 14023.42, writes: 0.00, response time: 126.76ms (95%), errors: 0.00, reconnects:  0.00
+[ 150s] threads: 112, tps: 1003.10, reads: 14035.01, writes: 0.00, response time: 126.76ms (95%), errors: 0.00, reconnects:  0.00
+[ 160s] threads: 112, tps: 1001.60, reads: 14029.65, writes: 0.00, response time: 126.61ms (95%), errors: 0.00, reconnects:  0.00
+[ 170s] threads: 112, tps: 1002.90, reads: 14032.50, writes: 0.00, response time: 126.34ms (95%), errors: 0.00, reconnects:  0.00
+[ 180s] threads: 112, tps: 1001.10, reads: 14009.64, writes: 0.00, response time: 126.61ms (95%), errors: 0.00, reconnects:  0.00
+[ 190s] threads: 112, tps: 1000.60, reads: 14029.96, writes: 0.00, response time: 126.65ms (95%), errors: 0.00, reconnects:  0.00
+[ 200s] threads: 112, tps: 1003.90, reads: 14040.06, writes: 0.00, response time: 126.42ms (95%), errors: 0.00, reconnects:  0.00
+[ 210s] threads: 112, tps: 1002.20, reads: 14025.30, writes: 0.00, response time: 126.84ms (95%), errors: 0.00, reconnects:  0.00
+[ 220s] threads: 112, tps: 1001.50, reads: 14028.27, writes: 0.00, response time: 126.76ms (95%), errors: 0.00, reconnects:  0.00
+[ 230s] threads: 112, tps: 1002.50, reads: 14019.77, writes: 0.00, response time: 126.65ms (95%), errors: 0.00, reconnects:  0.00
+[ 240s] threads: 112, tps: 1002.80, reads: 14055.63, writes: 0.00, response time: 126.19ms (95%), errors: 0.00, reconnects:  0.00
+[ 250s] threads: 112, tps: 1001.80, reads: 14028.00, writes: 0.00, response time: 126.57ms (95%), errors: 0.00, reconnects:  0.00
+[ 260s] threads: 112, tps: 1001.70, reads: 14015.63, writes: 0.00, response time: 126.80ms (95%), errors: 0.00, reconnects:  0.00
+[ 270s] threads: 112, tps: 1001.30, reads: 14016.57, writes: 0.00, response time: 126.61ms (95%), errors: 0.00, reconnects:  0.00
+[ 280s] threads: 112, tps: 1001.70, reads: 14027.27, writes: 0.00, response time: 126.76ms (95%), errors: 0.00, reconnects:  0.00
+[ 290s] threads: 112, tps: 1003.40, reads: 14048.06, writes: 0.00, response time: 126.34ms (95%), errors: 0.00, reconnects:  0.00
+[ 300s] threads: 112, tps: 1002.90, reads: 14039.66, writes: 0.00, response time: 126.57ms (95%), errors: 0.00, reconnects:  0.00
+OLTP test statistics:
+    queries performed:
+        read:                            4209814
+        write:                           0
+        other:                           300701
+        total:                           4510515
+    transactions:                        300701 (1002.13 per sec.)
+    read/write requests:                 4209814 (14029.83 per sec.)
+    other operations:                    300701 (1002.13 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          300.0617s
+    total number of events:              300701
+    total time taken by event execution: 33603.6517s
+    response time:
+         min:                                 59.33ms
+         avg:                                111.75ms
+         max:                                148.89ms
+         approx.  95 percentile:             126.61ms
+
+Threads fairness:
+    events (avg/stddev):           2684.8304/4.60
+    execution time (avg/stddev):   300.0326/0.02
+

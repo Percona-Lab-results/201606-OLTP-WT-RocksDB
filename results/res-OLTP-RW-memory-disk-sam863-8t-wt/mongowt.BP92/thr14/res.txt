@@ -1,0 +1,69 @@
+sysbench 1.0:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 14
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+setting write concern to 0
+Threads started!
+
+[  10s] threads: 14, tps: 2416.89, reads: 33848.33, writes: 7250.86, response time: 6.36ms (95%), errors: 0.00, reconnects:  0.00
+[  20s] threads: 14, tps: 2497.49, reads: 34972.16, writes: 7494.87, response time: 6.30ms (95%), errors: 0.00, reconnects:  0.00
+[  30s] threads: 14, tps: 2475.41, reads: 34652.38, writes: 7423.64, response time: 6.26ms (95%), errors: 0.00, reconnects:  0.00
+[  40s] threads: 14, tps: 2423.79, reads: 33931.47, writes: 7271.87, response time: 6.19ms (95%), errors: 0.00, reconnects:  0.00
+[  50s] threads: 14, tps: 2378.70, reads: 33301.54, writes: 7136.81, response time: 6.21ms (95%), errors: 0.00, reconnects:  0.00
+[  60s] threads: 14, tps: 1858.60, reads: 26019.97, writes: 5574.59, response time: 18.88ms (95%), errors: 0.00, reconnects:  0.00
+[  70s] threads: 14, tps: 1809.60, reads: 25338.47, writes: 5430.22, response time: 18.12ms (95%), errors: 0.00, reconnects:  0.00
+[  80s] threads: 14, tps: 1802.89, reads: 25236.31, writes: 5407.48, response time: 25.77ms (95%), errors: 0.00, reconnects:  0.00
+[  90s] threads: 14, tps: 1783.31, reads: 24965.29, writes: 5349.92, response time: 21.35ms (95%), errors: 0.00, reconnects:  0.00
+[ 100s] threads: 14, tps: 1836.80, reads: 25717.65, writes: 5510.79, response time: 19.77ms (95%), errors: 0.00, reconnects:  0.00
+[ 110s] threads: 14, tps: 1870.59, reads: 26185.82, writes: 5611.78, response time: 20.26ms (95%), errors: 0.00, reconnects:  0.00
+[ 120s] threads: 14, tps: 1963.20, reads: 27487.21, writes: 5889.60, response time: 11.98ms (95%), errors: 0.00, reconnects:  0.00
+[ 130s] threads: 14, tps: 1929.31, reads: 27006.71, writes: 5788.12, response time: 18.54ms (95%), errors: 0.00, reconnects:  0.00
+[ 140s] threads: 14, tps: 1962.39, reads: 27481.95, writes: 5889.17, response time: 17.89ms (95%), errors: 0.00, reconnects:  0.00
+[ 150s] threads: 14, tps: 1817.81, reads: 25442.30, writes: 5450.82, response time: 19.43ms (95%), errors: 0.00, reconnects:  0.00
+[ 160s] threads: 14, tps: 2466.20, reads: 34528.45, writes: 7398.79, response time: 6.03ms (95%), errors: 0.00, reconnects:  0.00
+[ 170s] threads: 14, tps: 2419.80, reads: 33876.47, writes: 7259.39, response time: 5.96ms (95%), errors: 0.00, reconnects:  0.00
+[ 180s] threads: 14, tps: 2498.90, reads: 34987.66, writes: 7497.11, response time: 5.89ms (95%), errors: 0.00, reconnects:  0.00
+[ 190s] threads: 14, tps: 2317.91, reads: 32449.92, writes: 6954.73, response time: 5.95ms (95%), errors: 0.00, reconnects:  0.00
+[ 200s] threads: 14, tps: 2394.09, reads: 33513.28, writes: 7180.87, response time: 5.91ms (95%), errors: 0.00, reconnects:  0.00
+[ 210s] threads: 14, tps: 2474.01, reads: 34635.13, writes: 7422.03, response time: 5.84ms (95%), errors: 0.00, reconnects:  0.00
+[ 220s] threads: 14, tps: 2092.39, reads: 29294.47, writes: 6276.77, response time: 7.41ms (95%), errors: 0.00, reconnects:  0.00
+[ 230s] threads: 14, tps: 1905.10, reads: 26671.43, writes: 5715.31, response time: 10.49ms (95%), errors: 0.00, reconnects:  0.00
+[ 240s] threads: 14, tps: 1991.70, reads: 27880.87, writes: 5975.29, response time: 16.35ms (95%), errors: 0.00, reconnects:  0.00
+[ 250s] threads: 14, tps: 1914.60, reads: 26815.17, writes: 5746.41, response time: 10.39ms (95%), errors: 0.00, reconnects:  0.00
+[ 260s] threads: 14, tps: 1923.70, reads: 26931.73, writes: 5771.09, response time: 10.84ms (95%), errors: 0.00, reconnects:  0.00
+[ 270s] threads: 14, tps: 1962.70, reads: 27472.62, writes: 5885.30, response time: 13.37ms (95%), errors: 0.00, reconnects:  0.00
+[ 280s] threads: 14, tps: 1839.40, reads: 25751.70, writes: 5518.90, response time: 11.92ms (95%), errors: 0.00, reconnects:  0.00
+[ 290s] threads: 14, tps: 1861.70, reads: 26060.91, writes: 5584.80, response time: 14.15ms (95%), errors: 0.00, reconnects:  0.00
+[ 300s] threads: 14, tps: 1914.00, reads: 26803.57, writes: 5744.19, response time: 12.00ms (95%), errors: 0.00, reconnects:  0.00
+OLTP test statistics:
+    queries performed:
+        read:                            8792616
+        write:                           1884132
+        other:                           628044
+        total:                           11304792
+    transactions:                        628044 (2093.35 per sec.)
+    read/write requests:                 10676748 (35586.91 per sec.)
+    other operations:                    628044 (2093.35 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          300.0190s
+    total number of events:              628044
+    total time taken by event execution: 4199.3613s
+    response time:
+         min:                                  3.43ms
+         avg:                                  6.69ms
+         max:                                194.36ms
+         approx.  95 percentile:               6.60ms
+
+Threads fairness:
+    events (avg/stddev):           44860.2857/96.42
+    execution time (avg/stddev):   299.9544/0.00
+

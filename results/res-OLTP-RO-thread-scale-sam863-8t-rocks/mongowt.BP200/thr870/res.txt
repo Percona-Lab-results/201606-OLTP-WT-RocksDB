@@ -1,0 +1,156 @@
+sysbench 1.0:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 870
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+setting write concern to 0
+Initializing worker threads...
+
+Threads started!
+
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  10s] threads: 870, tps: 5079.94, reads: 71179.52, writes: 0.00, response time: 97.46ms (95%), errors: 17.10, reconnects:  0.00
+(last message repeated 331 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 2 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 3 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 17 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 7 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 35 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 13 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 4 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 16 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 5 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 4 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 12 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 10 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 30 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  20s] threads: 870, tps: 5123.72, reads: 71243.12, writes: 0.00, response time: 89.90ms (95%), errors: 39.10, reconnects:  0.00
+(last message repeated 368 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 46 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 21 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 43 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 5 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 2 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 35 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  30s] threads: 870, tps: 5102.50, reads: 70705.30, writes: 0.00, response time: 87.61ms (95%), errors: 62.50, reconnects:  0.00
+(last message repeated 348 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 23 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 6 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 13 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 2 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 21 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  40s] threads: 870, tps: 5122.20, reads: 70937.68, writes: 0.00, response time: 87.22ms (95%), errors: 66.50, reconnects:  0.00
+(last message repeated 631 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 16 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 23 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 33 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  50s] threads: 870, tps: 5130.30, reads: 70863.88, writes: 0.00, response time: 87.48ms (95%), errors: 76.60, reconnects:  0.00
+[  60s] threads: 870, tps: 5135.90, reads: 71016.70, writes: 0.00, response time: 87.30ms (95%), errors: 76.40, reconnects:  0.00
+[  70s] threads: 870, tps: 5122.00, reads: 70757.72, writes: 0.00, response time: 87.24ms (95%), errors: 75.10, reconnects:  0.00
+[  80s] threads: 870, tps: 5144.20, reads: 71103.40, writes: 0.00, response time: 87.14ms (95%), errors: 79.20, reconnects:  0.00
+[  90s] threads: 870, tps: 5123.10, reads: 70843.60, writes: 0.00, response time: 87.17ms (95%), errors: 71.80, reconnects:  0.00
+[ 100s] threads: 870, tps: 5141.39, reads: 71060.36, writes: 0.00, response time: 87.22ms (95%), errors: 77.50, reconnects:  0.00
+[ 110s] threads: 870, tps: 5153.81, reads: 71204.84, writes: 0.00, response time: 87.04ms (95%), errors: 77.40, reconnects:  0.00
+[ 120s] threads: 870, tps: 5124.67, reads: 70895.28, writes: 0.00, response time: 87.19ms (95%), errors: 76.90, reconnects:  0.00
+[ 130s] threads: 870, tps: 5140.73, reads: 70947.93, writes: 0.00, response time: 87.27ms (95%), errors: 79.20, reconnects:  0.00
+[ 140s] threads: 870, tps: 5134.88, reads: 71017.76, writes: 0.00, response time: 87.22ms (95%), errors: 74.60, reconnects:  0.00
+[ 150s] threads: 870, tps: 5141.21, reads: 71002.60, writes: 0.00, response time: 87.24ms (95%), errors: 79.70, reconnects:  0.00
+[ 160s] threads: 870, tps: 5129.29, reads: 70961.76, writes: 0.00, response time: 87.24ms (95%), errors: 72.10, reconnects:  0.00
+[ 170s] threads: 870, tps: 5129.61, reads: 70845.87, writes: 0.00, response time: 87.32ms (95%), errors: 77.50, reconnects:  0.00
+[ 180s] threads: 870, tps: 5129.80, reads: 70924.08, writes: 0.00, response time: 87.45ms (95%), errors: 77.50, reconnects:  0.00
+[ 190s] threads: 870, tps: 5135.90, reads: 70995.93, writes: 0.00, response time: 86.98ms (95%), errors: 76.60, reconnects:  0.00
+[ 200s] threads: 870, tps: 5133.40, reads: 70906.11, writes: 0.00, response time: 87.61ms (95%), errors: 79.50, reconnects:  0.00
+[ 210s] threads: 870, tps: 5130.00, reads: 70930.90, writes: 0.00, response time: 87.30ms (95%), errors: 74.30, reconnects:  0.00
+[ 220s] threads: 870, tps: 5153.60, reads: 71210.40, writes: 0.00, response time: 86.91ms (95%), errors: 79.90, reconnects:  0.00
+[ 230s] threads: 870, tps: 5142.20, reads: 71071.47, writes: 0.00, response time: 86.65ms (95%), errors: 72.40, reconnects:  0.00
+[ 240s] threads: 870, tps: 5142.40, reads: 71094.51, writes: 0.00, response time: 87.30ms (95%), errors: 77.30, reconnects:  0.00
+[ 250s] threads: 870, tps: 5135.68, reads: 70961.59, writes: 0.00, response time: 87.01ms (95%), errors: 77.40, reconnects:  0.00
+[ 260s] threads: 870, tps: 5147.22, reads: 71145.53, writes: 0.00, response time: 87.04ms (95%), errors: 76.70, reconnects:  0.00
+[ 270s] threads: 870, tps: 5149.00, reads: 71140.70, writes: 0.00, response time: 87.48ms (95%), errors: 79.20, reconnects:  0.00
+[ 280s] threads: 870, tps: 5149.90, reads: 71245.70, writes: 0.00, response time: 86.62ms (95%), errors: 71.40, reconnects:  0.00
+[ 290s] threads: 870, tps: 5157.89, reads: 71232.10, writes: 0.00, response time: 86.78ms (95%), errors: 80.10, reconnects:  0.00
+[ 300s] threads: 870, tps: 5140.39, reads: 71076.72, writes: 0.00, response time: 87.06ms (95%), errors: 73.30, reconnects:  0.00
+(last message repeated 20106 times)
+OLTP test statistics:
+    queries performed:
+        read:                            21308486
+        write:                           0
+        other:                           1541137
+        total:                           22849623
+    transactions:                        1541137 (5025.78 per sec.)
+    read/write requests:                 21308486 (69488.82 per sec.)
+    other operations:                    1541137 (5025.78 per sec.)
+    ignored errors:                      22286  (72.68 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          306.6463s
+    total number of events:              1541137
+    total time taken by event execution: 262866.0960s
+    response time:
+         min:                                  6.19ms
+         avg:                                170.57ms
+         max:                              26587.71ms
+         approx.  95 percentile:              87.58ms
+
+Threads fairness:
+    events (avg/stddev):           1771.4218/2202.27
+    execution time (avg/stddev):   302.1449/2.24
+

@@ -1,0 +1,104 @@
+sysbench 1.0:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 750
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+setting write concern to 0
+Initializing worker threads...
+
+Threads started!
+
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  10s] threads: 750, tps: 5072.93, reads: 71128.51, writes: 0.00, response time: 97.26ms (95%), errors: 12.30, reconnects:  0.00
+(last message repeated 335 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 11 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 16 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  20s] threads: 750, tps: 5130.80, reads: 71455.59, writes: 0.00, response time: 88.45ms (95%), errors: 30.30, reconnects:  0.00
+(last message repeated 262 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 72 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 30 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 6 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 78 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  30s] threads: 750, tps: 5128.60, reads: 71191.72, writes: 0.00, response time: 86.88ms (95%), errors: 51.40, reconnects:  0.00
+(last message repeated 345 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 2 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  40s] threads: 750, tps: 5121.41, reads: 71095.63, writes: 0.00, response time: 86.31ms (95%), errors: 50.70, reconnects:  0.00
+(last message repeated 472 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 13 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+(last message repeated 1 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection error calling ismaster on '172.16.0.3:27017'])
+(last message repeated 39 times)
+FATAL: error in distinct range (No suitable servers found (`serverSelectionTryOnce` set): [connection timeout calling ismaster on '172.16.0.3:27017'])
+[  50s] threads: 750, tps: 5125.19, reads: 71054.77, writes: 0.00, response time: 86.46ms (95%), errors: 58.50, reconnects:  0.00
+[  60s] threads: 750, tps: 5119.39, reads: 70970.72, writes: 0.00, response time: 86.59ms (95%), errors: 59.80, reconnects:  0.00
+[  70s] threads: 750, tps: 5134.80, reads: 71173.34, writes: 0.00, response time: 86.36ms (95%), errors: 57.80, reconnects:  0.00
+[  80s] threads: 750, tps: 5126.32, reads: 71052.21, writes: 0.00, response time: 86.70ms (95%), errors: 60.80, reconnects:  0.00
+[  90s] threads: 750, tps: 5122.58, reads: 71024.95, writes: 0.00, response time: 86.59ms (95%), errors: 57.80, reconnects:  0.00
+[ 100s] threads: 750, tps: 5127.30, reads: 71056.33, writes: 0.00, response time: 86.72ms (95%), errors: 59.70, reconnects:  0.00
+[ 110s] threads: 750, tps: 5124.02, reads: 71004.03, writes: 0.00, response time: 86.59ms (95%), errors: 60.90, reconnects:  0.00
+[ 120s] threads: 750, tps: 5117.68, reads: 70943.37, writes: 0.00, response time: 86.65ms (95%), errors: 58.10, reconnects:  0.00
+[ 130s] threads: 750, tps: 5121.80, reads: 70967.99, writes: 0.00, response time: 86.70ms (95%), errors: 62.60, reconnects:  0.00
+[ 140s] threads: 750, tps: 5117.00, reads: 70948.70, writes: 0.00, response time: 86.67ms (95%), errors: 57.40, reconnects:  0.00
+[ 150s] threads: 750, tps: 5119.89, reads: 70944.51, writes: 0.00, response time: 86.72ms (95%), errors: 60.80, reconnects:  0.00
+[ 160s] threads: 750, tps: 5109.90, reads: 70858.31, writes: 0.00, response time: 86.67ms (95%), errors: 58.00, reconnects:  0.00
+[ 170s] threads: 750, tps: 5107.82, reads: 70783.19, writes: 0.00, response time: 86.93ms (95%), errors: 59.50, reconnects:  0.00
+[ 180s] threads: 750, tps: 5111.38, reads: 70818.13, writes: 0.00, response time: 86.93ms (95%), errors: 61.40, reconnects:  0.00
+[ 190s] threads: 750, tps: 5113.90, reads: 70894.95, writes: 0.00, response time: 86.70ms (95%), errors: 57.80, reconnects:  0.00
+[ 200s] threads: 750, tps: 5114.00, reads: 70851.18, writes: 0.00, response time: 86.96ms (95%), errors: 62.60, reconnects:  0.00
+[ 210s] threads: 750, tps: 5110.11, reads: 70842.99, writes: 0.00, response time: 86.72ms (95%), errors: 57.80, reconnects:  0.00
+[ 220s] threads: 750, tps: 5122.89, reads: 71010.51, writes: 0.00, response time: 86.75ms (95%), errors: 60.60, reconnects:  0.00
+[ 230s] threads: 750, tps: 5126.59, reads: 71061.90, writes: 0.00, response time: 86.46ms (95%), errors: 58.10, reconnects:  0.00
+[ 240s] threads: 750, tps: 5095.61, reads: 70650.08, writes: 0.00, response time: 86.98ms (95%), errors: 59.20, reconnects:  0.00
+[ 250s] threads: 750, tps: 5104.80, reads: 70709.41, writes: 0.00, response time: 87.32ms (95%), errors: 61.80, reconnects:  0.00
+[ 260s] threads: 750, tps: 5103.30, reads: 70750.36, writes: 0.00, response time: 86.72ms (95%), errors: 57.60, reconnects:  0.00
+[ 270s] threads: 750, tps: 5104.69, reads: 70698.43, writes: 0.00, response time: 86.93ms (95%), errors: 62.30, reconnects:  0.00
+[ 280s] threads: 750, tps: 5105.85, reads: 70791.25, writes: 0.00, response time: 86.96ms (95%), errors: 57.90, reconnects:  0.00
+[ 290s] threads: 750, tps: 5092.30, reads: 70574.60, writes: 0.00, response time: 86.96ms (95%), errors: 60.70, reconnects:  0.00
+[ 300s] threads: 750, tps: 5108.19, reads: 70806.90, writes: 0.00, response time: 86.88ms (95%), errors: 58.40, reconnects:  0.00
+(last message repeated 15642 times)
+OLTP test statistics:
+    queries performed:
+        read:                            21284126
+        write:                           0
+        other:                           1535161
+        total:                           22819287
+    transactions:                        1535161 (5006.46 per sec.)
+    read/write requests:                 21284126 (69411.65 per sec.)
+    other operations:                    1535161 (5006.46 per sec.)
+    ignored errors:                      17344  (56.56 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          306.6362s
+    total number of events:              1535161
+    total time taken by event execution: 226472.2914s
+    response time:
+         min:                                  5.69ms
+         avg:                                147.52ms
+         max:                              26577.12ms
+         approx.  95 percentile:              87.11ms
+
+Threads fairness:
+    events (avg/stddev):           2046.8813/2250.20
+    execution time (avg/stddev):   301.9631/2.24
+
