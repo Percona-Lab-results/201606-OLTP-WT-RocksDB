@@ -73,64 +73,39 @@ Read-Write, threads
 RW, Threads 1-1000 in memory (cachesize 200GB)
 ----------------------------------------------
 
+### Samsung 850
+
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-7-1.png) ![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-7-2.png) \#\#\# Samsung 863
+
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-8-1.png) \#\#\# Samsung PM1725
+
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-9-1.png)
+
+### Samsung storage
+
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-10-1.png) \#\# RW, Threads 1-1000 io-bound (cachesize 20GB) \#\#\# Samsung 850
+
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-11-1.png)
+
 ### Samsung 863
 
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-7-1.png)
-
-RW, Threads 1-1000 io bound (cachesize 20GB)
---------------------------------------------
-
-### Samsung 863
-
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-8-1.png) ![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-8-2.png)
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
 ### RW, Threads 112 io bound (cachesize 20GB)
 
 -   Samsung 863
 
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
-RW, Threads 1-1000 in memory (cachesize 200GB)
-----------------------------------------------
+### Samsung 863 - syncdelay 60/600
 
-### Samsung 850
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-14-1.png) ![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-14-2.png) \#\# RW, Threads 1-300 io-bound (cachesize 20GB) \#\#\# Samsung pm1725
 
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-10-1.png)
-
-RW, Threads 1-300 io-bound (cachesize 20GB)
--------------------------------------------
-
-### Samsung 850
-
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-11-1.png)
-
-RW, Threads 1-1000 in memory (cachesize 200GB)
-----------------------------------------------
-
-### Samsung PM1725
-
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-12-1.png)
-
-RW, Threads 1-300 io-bound (cachesize 20GB)
--------------------------------------------
-
-### Samsung pm1725
-
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-13-1.png) ![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-13-2.png)
-
-RW, Threads 1-1000 in memory (cachesize 200GB)
-----------------------------------------------
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-15-1.png) ![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-15-2.png)
 
 ### Samsung storage
 
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-14-1.png)
-
-RW, Threads 1-1000 iobound (cachesize 20GB)
--------------------------------------------
-
-### Samsung storage
-
-![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-15-1.png)
+![](summary-OLTP-mongo_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
 -   Charts examples
 

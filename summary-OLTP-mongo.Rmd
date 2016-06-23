@@ -154,6 +154,7 @@ m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
 
 m+geom_jitter()+expand_limits(y=0)+
   labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RO-threads.png", width=12, height=8)
 
 
 ```
@@ -226,74 +227,8 @@ ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RW-cache-boxplot.png",
 
 # Read-Write, threads
 
-
 ## RW, Threads 1-1000 in memory (cachesize 200GB)
-### Samsung 863
 
-```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
-
-title <- "[network] sysbench OLTP READ-ONLY in memory / samsung SM863"
-p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
-                 FROM sb_mongo_results sr 
-                 WHERE runsign="oltp_rw_threads_sam863_network" AND threads in 
-                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
-                 ' )
-
-flevels <- levels(as.factor(p2$cachesize))
-m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
-
-m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
-
-
-```
-
-## RW, Threads 1-1000 io bound (cachesize 20GB)
-### Samsung 863
-
-```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
-
-title <- "[network] sysbench OLTP READ-WRITE iobound / samsung SM863"
-p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
-                 FROM sb_mongo_results sr 
-                 WHERE runsign="oltp_rw_threads_cache20G_sam863_network" AND threads in 
-                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
-                 ' )
-
-flevels <- levels(as.factor(p2$cachesize))
-m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
-
-m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
-
-m+geom_boxplot()+geom_point( position = position_jitterdodge())+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
-
-```
-
-### RW, Threads 112 io bound (cachesize 20GB)
-* Samsung 863
-
-```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
-
-title <- "[network] sysbench OLTP READ-WRITE iobound / samsung SM863 / 112 threads"
-p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
-                 FROM sb_mongo_results sr 
-                 WHERE runsign="oltp_rw_threads_cache20G_sam863_network" AND threads=112 
-                 ' )
-
-flevels <- levels(as.factor(p2$cachesize))
-m <- ggplot(p2, aes(x=as.numeric(sec),y=as.numeric(tps),color=engine))
-
-m+geom_point()+geom_line()+expand_limits(y=0)+
-  labs(x="--- time, sec [10 sec intervals] --->",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
-
-
-```
-
-
-
-## RW, Threads 1-1000 in memory (cachesize 200GB)
 ### Samsung 850
 
 ```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
@@ -309,40 +244,46 @@ flevels <- levels(as.factor(p2$cachesize))
 m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
 
 m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam850-RW-threads-scale.png", width=12, height=8)
 
+m <- ggplot(subset(p2,threads==112), aes(x=as.numeric(sec),y=as.numeric(tps),color=engine))
+
+m+geom_point()+geom_line()+expand_limits(y=0)+
+  labs(x="--- time, sec --->",y="Throughput, tps",title="sysbench OLTP READ-WRITE in memory / 112 threads /samsung 850 Pro")+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam850-RW-threads-scale-112threads.png", width=12, height=8)
 
 ```
-
-## RW, Threads 1-300 io-bound (cachesize 20GB)
-### Samsung 850
+### Samsung 863
 
 ```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
 
-title <- "[network] sysbench OLTP READ-WRITE io-bound / samsung 850 Pro"
+title <- "[network] sysbench OLTP READ-WRITE in memory / samsung SM863"
 p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
                  FROM sb_mongo_results sr 
-                 WHERE runsign="oltp_rw_threads_cache20G_sam850_network" AND threads in 
-                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>20)
+                 WHERE runsign="oltp_rw_threads_sam863_network" AND threads in 
+                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
                  ' )
 
 flevels <- levels(as.factor(p2$cachesize))
-
 m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
 
 m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
-
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RW-threads-scale.png", width=12, height=8)
 
 ```
-
-
-## RW, Threads 1-1000 in memory (cachesize 200GB)
 ### Samsung PM1725
 
 ```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
 
-title <- "[network] sysbench OLTP READ-ONLY in memory / samsung PM1725"
+title <- "[network] sysbench OLTP READ-WRITE in memory / samsung PM1725"
 p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
                  FROM sb_mongo_results sr 
                  WHERE runsign="oltp_rw_threads_pm1725_network" AND threads in 
@@ -353,16 +294,136 @@ flevels <- levels(as.factor(p2$cachesize))
 m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
 
 m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/pm1725-RW-threads-scale.png", width=12, height=8)
 
 ```
 
+### Samsung storage
+
+```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
+
+title <- "sysbench OLTP READ-WRITE in memory"
+p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, storage,tps, rt 
+                 FROM sb_mongo_results sr 
+                 WHERE runsign IN ("oltp_rw_threads_pm1725_network","oltp_rw_threads_sam850_network","oltp_rw_threads_sam863_network") AND threads in 
+                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
+                 ' )
+
+p2$storage_f = factor(p2$storage, levels=c('sam850','sam863','pm1725'))
+
+m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
+
+m+geom_jitter()+expand_limits(y=0)+
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+facet_wrap(~storage_f)+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/storage-RW-threads-scale.png", width=12, height=8)
+
+```
+## RW, Threads 1-1000 io-bound (cachesize 20GB)
+### Samsung 850
+
+```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
+
+title <- "sysbench OLTP READ-WRITE io-bound / samsung 850 Pro"
+p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
+                 FROM sb_mongo_results sr 
+                 WHERE runsign="oltp_rw_threads_cache20G_sam850_network" AND threads in 
+                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>20)
+                 ' )
+
+m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
+
+m+geom_jitter()+expand_limits(y=0)+
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam850-RW-io-threads-scale.png", width=12, height=8)
+
+
+```
+
+### Samsung 863
+
+```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
+
+title <- "sysbench OLTP READ-WRITE iobound / samsung SM863"
+p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
+                 FROM sb_mongo_results sr 
+                 WHERE runsign="oltp_rw_threads_cache20G_sam863_network" AND threads in 
+                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
+                 ' )
+
+m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
+
+m+geom_jitter()+expand_limits(y=0)+
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RW-io-threads-scale.png", width=12, height=8)
+
+```
+
+### RW, Threads 112 io bound (cachesize 20GB)
+* Samsung 863
+
+```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
+
+title <- "sysbench OLTP READ-WRITE iobound / samsung SM863 / 112 threads"
+p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
+                 FROM sb_mongo_results sr 
+                 WHERE runsign="oltp_rw_threads_cache20G_sam863_network" AND threads=112 
+                 ' )
+
+flevels <- levels(as.factor(p2$cachesize))
+m <- ggplot(p2, aes(x=as.numeric(sec),y=as.numeric(tps),color=engine))
+
+m+geom_point()+geom_line()+expand_limits(y=0)+
+  labs(x="--- time, sec [10 sec intervals] --->",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RW-io-threads-112t.png", width=12, height=8)
+
+
+```
+
+### Samsung 863 - syncdelay 60/600
+
+```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
+
+title <- "sysbench OLTP READ-WRITE iobound / samsung SM863"
+p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt,
+                json_unquote(json_extract(jrunid,"$.syncdelay")) syncdelay 
+                 FROM sb_mongo_results sr 
+                 WHERE runsign="oltp_rw_longrun_cache20G_sam863_network" AND threads in 
+                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
+                 ' )
+
+m <- ggplot(p2, aes(x=as.numeric(sec),y=as.numeric(tps),color=syncdelay))
+
+m+geom_point()+geom_line()+expand_limits(y=0)+
+  labs(x="--- time, sec --->",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="syncdelay")+facet_grid(syncdelay~.,labeller = label_both)
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RW-io-sync-delay.png", width=12, height=8)
+
+
+m <- ggplot(p2, aes(x=as.factor(syncdelay),y=as.numeric(tps),color=syncdelay))
+
+m+geom_boxplot()+expand_limits(y=0)+
+  labs(x="syncdelay",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="syncdelay")
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/sam863-RW-io-sync-delay-boxplot.png", width=12, height=8)
+
+
+```
 ## RW, Threads 1-300 io-bound (cachesize 20GB)
 ### Samsung pm1725
 
 ```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
 
-title <- "[network] sysbench OLTP READ-WRITE io-bound / samsung PM1725"
+title <- "sysbench OLTP READ-WRITE io-bound / samsung PM1725"
 p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, tps, rt 
                  FROM sb_mongo_results sr 
                  WHERE runsign="oltp_rw_threads_cache20G_pm1725_network" AND threads in 
@@ -374,52 +435,47 @@ flevels <- levels(as.factor(p2$cachesize))
 m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
 
 m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
+
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/pm1725-RW-io-threads-scale.png", width=12, height=8)
+
 
 m+geom_boxplot()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")
+  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))
 
 ```
 
-## RW, Threads 1-1000 in memory (cachesize 200GB)
+
+
 ### Samsung storage
 
 ```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
 
-title <- "[network] sysbench OLTP READ-WRITE in memory"
-p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, storage,tps, rt 
-                 FROM sb_mongo_results sr 
-                 WHERE runsign IN ("oltp_rw_threads_pm1725_network","oltp_rw_threads_sam850_network","oltp_rw_threads_sam863_network") AND threads in 
-                    (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
-                 ' )
-
-flevels <- levels(as.factor(p2$cachesize))
-m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
-
-m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")+facet_wrap(~storage)
-
-```
-
-## RW, Threads 1-1000 iobound (cachesize 20GB)
-### Samsung storage
-
-```{r , echo=FALSE, fig.height=8, fig.width=10, warning=FALSE}
-
-title <- "[network] sysbench OLTP READ-WRITE iobound"
+title <- "sysbench OLTP READ-WRITE iobound"
 p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engine, workload, storage,tps, rt 
                  FROM sb_mongo_results sr 
                  WHERE runsign IN ("oltp_rw_threads_cache20G_pm1725_network","oltp_rw_threads_cache20G_sam850_network","oltp_rw_threads_cache20G_sam863_network") AND threads in 
                     (SELECT threads FROM sb_mongo_results GROUP BY threads HAVING COUNT(*)>10)
                  ' )
 
-flevels <- levels(as.factor(p2$cachesize))
+p2$storage_f = factor(p2$storage, levels=c('sam850','sam863','pm1725'))
+
 m <- ggplot(p2, aes(x=as.factor(threads),y=as.numeric(tps),color=engine))
 
 m+geom_jitter()+expand_limits(y=0)+
-  labs(x="Threads",y="Throughput, tps",title=title)+tm+scale_color_tableau(name="Engine")+facet_wrap(~storage)
+  labs(x="Threads",y="Throughput, tps",title=title)+
+  tm+scale_color_tableau(name="Engine")+
+  theme(axis.text.x=element_text(size=8, angle = 90, hjust = 1))+
+  facet_wrap(~storage_f)
+ggsave(file="/Users/vadim/Google Drive/CTO Lab/img/storage-RW-io-threads-scale.png", width=12, height=8)
 
 ```
+
+
+
 
 * Charts examples
 
@@ -515,6 +571,7 @@ p2 = dbGetQuery( con,'SELECT sec,sr.runid runidfull, sr.threads, cachesize, engi
                  ' )
 
 flevels <- levels(as.factor(p2$cachesize))
+
 m <- ggplot(p2, aes(x=as.factor(cachesize),y=as.numeric(tps),color=compr))
 
 m+geom_jitter()+expand_limits(y=0)+
